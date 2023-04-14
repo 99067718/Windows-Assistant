@@ -68,7 +68,7 @@ while True:
     try:
         answer = Request()
         if answer == "help":
-            print("Here's the list of commands \n1. execute\n2. print\n3. clear\n4. getHTML")
+            print("Here's the list of commands \n1. execute\n2. print\n3. clear")
         elif answer == "execute":
             Request(question="Enter your code here: ", type="exec")
         elif answer == "print":
@@ -80,10 +80,8 @@ while True:
             print("Console succesfully cleared!")
         elif answer == "rickroll":
             rickRoll()
-        elif answer == "getHTML":
-            webSc.GetHTML(Request("Link to the website here: "))
         else:
-            print("This is not a valid command")
+            webSc.inputQuestion(answer)
     except Exception as ex:
         print("Something went wrong:")
         print(ex)
